@@ -1,0 +1,66 @@
+{
+  "User": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "ID user"
+      },
+      "name": {
+        "type": "string",
+        "description": "Name"
+      },
+      "points": {
+        "type": "integer",
+        "description": "Point Sum user"
+      }
+    }
+  },
+  "Question": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "ID Quiz"
+      },
+      "text": {
+        "type": "string",
+        "description": "Text Quiz"
+      },
+      "answer": {
+        "type": "string",
+        "description": "Answer Quiz"
+      },
+      "points": {
+        "type": "integer",
+        "description": "Reward Point True"
+      }
+    }
+  },
+  "Leaderboard": {
+    "type": "object",
+    "properties": {
+      "rank": {
+        "type": "integer",
+        "description": "Leaderboard Rank"
+      },
+      "user": {
+        "$ref": "#/User",
+        "description": "profile"
+      }
+    }
+  },
+  "QuizStats": {
+    "type": "object",
+    "properties": {
+      "totalPoints": {
+        "type": "integer",
+        "description": "Point Alocation"
+      },
+      "totalParticipants": {
+        "type": "integer",
+        "description": "User Participants"
+      }
+    }
+  }
+}
